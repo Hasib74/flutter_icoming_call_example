@@ -32,6 +32,7 @@ dependencies:
   cloud_firestore:
   firebase_database:
   firebase_messaging:
+  android_intent_plus:
 
 
 

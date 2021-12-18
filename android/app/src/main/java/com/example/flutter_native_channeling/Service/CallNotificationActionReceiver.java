@@ -70,19 +70,13 @@ public class CallNotificationActionReceiver extends BroadcastReceiver {
 
             }
         } else if (action.equalsIgnoreCase("DIALOG_CALL")) {
-
-
-            cancelNotification(context, _notificationId);
-
+            //  cancelNotification(context, _notificationId);
             // show ringing activity when phone is locked
             Intent intent = new Intent(this.mContext, NotificationActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             mContext.startActivity(intent);
         } else {
-
-
             cancelNotification(context, _notificationId);
-
             mContext.stopService(new Intent(context, NotificationActivity.class));
             Intent it = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
             mContext.sendBroadcast(it);
@@ -117,7 +111,7 @@ public class CallNotificationActionReceiver extends BroadcastReceiver {
         String ns = Context.NOTIFICATION_SERVICE;
         NotificationManager nMgr = (NotificationManager) ctx.getSystemService(ns);
         nMgr.cancel(notifyId);
-        
+
         ctx.stopService(new Intent(ctx, HeadsUpNotificationService.class));
         Intent istop = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
         ctx.sendBroadcast(istop);

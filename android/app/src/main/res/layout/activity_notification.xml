@@ -7,9 +7,13 @@
     tools:context=".Notification.NotificationActivity">
 
     <TextView
-        android:layout_width="120px"
-        android:layout_height="120px"
+        android:id="@+id/android_text"
+        android:layout_width="135dp"
+        android:layout_height="62dp"
         android:text="I am android"
+        android:textAlignment="center"
         android:textColor="#1A632A"
-        tools:ignore="MissingConstraints"></TextView>
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="264dp"></TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>

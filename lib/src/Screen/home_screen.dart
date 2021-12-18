@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
     _getBataryLevel();
 
     return Scaffold(
-      body: Container(),
+      body: Center(child: Text("Home"),),
     );
   }
 

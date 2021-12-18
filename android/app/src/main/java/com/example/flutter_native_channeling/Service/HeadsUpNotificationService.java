@@ -146,10 +146,21 @@ public class HeadsUpNotificationService extends Service implements MediaPlayer.O
                             .setOnAudioFocusChangeListener(afChangeListener, handler)
                             .build();
                     int res = audioManager.requestAudioFocus(focusRequest);
+
+                    System.out.println("Notification device is locked audio force request granted" + AudioManager.AUDIOFOCUS_REQUEST_GRANTED);
+
                     if (res == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                         if (!keyguardManager.isDeviceLocked()) {
 
+
+                            System.out.println("Notification device is not locked");
                             mediaPlayer.start();
+                        } else {
+
+                            System.out.println("Notification device is  locked");
+
+                            mediaPlayer.start();
+
                         }
 
                     }
@@ -192,7 +203,7 @@ public class HeadsUpNotificationService extends Service implements MediaPlayer.O
 
             data = intent.getExtras();
             name = data.getString("inititator");
-            if ( true ) {
+            if (true) {
                 callType = "Audio";
             } else {
                 callType = "Video";
