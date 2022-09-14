@@ -1,16 +1,22 @@
-# flutter_native_channeling
 
-A new Flutter project.
+# Key Features
 
-## Getting Started
+* Reject/ Answer button
 
-This project is a starting point for a Flutter application.
+* Ringtone for 30 second.
 
-A few resources to get you started if this is your first Flutter project:
+* If reject/ answer the call, the service will be stopped and the ringtone will be stopped as well.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* If answer call then redirects to flutter calling screen.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Working notification and ringtone for app lock mode also.
+
+I can not video for lock mode. But it is working properly.
+
+
+## Video Demo : 
+
+https://user-images.githubusercontent.com/45905451/190170211-d85b776d-e869-4f96-b497-2bf9ecb39323.mp4
+
+
+
